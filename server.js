@@ -9,11 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors({ origin: "*", preflightContinue: true, allowedHeaders: ["Content-Type"] }));
+app.use(cors()); // Enable CORS for all origins
 app.use(express.json()); // Essential for parsing req.body
 
 // The Route
-app.post('/api/survey', async (req, res) => {
+app.post('/', async (req, res) => {
   try {
     // 1. Check environment variables
     if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
