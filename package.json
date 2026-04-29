@@ -1,0 +1,27 @@
+{
+  "name": "online-survey-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".old-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youssef-devx/online-survey-serverless-function.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/youssef-devx/online-survey-serverless-function/issues"
+  },
+  "homepage": "https://github.com/youssef-devx/online-survey-serverless-function#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
