@@ -1,21 +1,3 @@
-/**
- * Vercel Serverless Function: Submit Survey Responses to Supabase
- * 
- * This function:
- * - Accepts survey data from the frontend
- * - Validates the payload
- * - Submits to Supabase using secure environment variables
- * - Returns success/error responses
- * 
- * Environment Variables Required:
- * - SUPABASE_URL: Your Supabase project URL
- * - SUPABASE_ANON_KEY: Your Supabase anon key
- * 
- * Deploy:
- * - This file should be in /api/submit-survey.js in your Vercel project
- * - Environment variables are set in Vercel Dashboard › Project › Settings › Environment Variables
- */
-
 export default async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== 'POST') {
