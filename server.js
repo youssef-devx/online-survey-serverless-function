@@ -9,7 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors()); // Replaces manual CORS headers and OPTIONS preflight handling
+app.use(cors(
+  {
+    origin: "*"
+  }
+)); // Replaces manual CORS headers and OPTIONS preflight handling
 app.use(express.json()); // Essential for parsing req.body
 
 // The Route
