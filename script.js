@@ -71,6 +71,8 @@ export default async function handler(req, res) {
       });
     }
 
+    payload.ip = payload.addr
+    delete payload.addr
     // Submit to Supabase
     const response = await fetch(
       `${process.env.SUPABASE_URL}/rest/v1/survey_responses`,
