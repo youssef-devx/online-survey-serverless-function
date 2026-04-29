@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   }
 
   // Enable CORS for your domain
-  res.setHeader('Access-Control-Allow-Origin', process.env.VERCEL_URL || '*');
+  res.setHeader('Access-Control-Allow-Origin', process.env.VERCEL_URL || 'https://online-survey-client.vercel.app/' || "https://online-survey-client.vercel.app");
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
