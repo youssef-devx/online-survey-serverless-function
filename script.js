@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  // Enable CORS for your domain
+  // // Enable CORS for your domain
   const allowedOrigins = [
     process.env.VERCEL_URL,
     'https://online-survey-client.vercel.app',
@@ -14,14 +14,14 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  // Only allow POST requests
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
   // Handle preflight
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
+  }
+
+  // Only allow POST requests
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
   try {
